@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCRS Globe</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.19.0/dist/maplibre-gl.css">
+  <script src="https://unpkg.com/maplibre-gl@5.19.0/dist/maplibre-gl.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header id="header">
+    <a id="header-title" href="./">
+      <i class="fa-solid fa-globe"></i> RCRS Globe
+    </a>
+    <div id="header-subtitle">RoboCupRescue Simulation Scenario Hub</div>
+    <a id="header-github" href="https://github.com/NONONOexe/rcrs-scenario-hub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </header>
+
+  <main>
+    <h2 id="globe-heading">Globe</h2>
+    <section id="globe-section">
+      <div id="map"></div>
+    </section>
+
+    <h2 id="scenario-heading">Scenarios</h2>
+    <section id="scenario-section">
+      <div id="scenario-placeholder">
+        <i class="fa-solid fa-hand-pointer"></i> Click a marker to explore scenarios
+      </div>
+      <div id="scenario-content" style="display: none;">
+        <div id="scenario-map-info">
+          <div id="scenario-thumbnail-wrap">
+            <div id="scenario-thumbnail-placeholder">NO IMAGE</div>
+          </div>
+          <div id="scenario-text">
+            <div id="scenario-city">-</div>
+            <div id="scenario-country">-</div>
+          </div>
+        </div>
+        <ul id="scenario-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>© 2026 Keisuke ANDO. Released under the <a href="https://github.com/NONONOexe/rcrs-scenario-hub/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>

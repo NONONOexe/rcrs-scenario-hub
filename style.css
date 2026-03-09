@@ -1,0 +1,277 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 56px;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0;
+}
+
+/* ---- Header ---- */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 12px 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#header-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: inherit;
+}
+
+#header-title:hover {
+  opacity: 0.75;
+}
+
+#header-subtitle {
+  font-size: 12px;
+  color: gray;
+  letter-spacing: 0.08em;
+}
+
+#header-github {
+  margin-left: auto;
+  font-size: 22px;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#header-github:hover {
+  opacity: 0.75;
+}
+
+/* ---- Globe section ----*/
+#globe-heading {
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+
+#globe-section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.618;
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #4286f4, #373B44);
+  border-radius: 8px;
+}
+
+.marker {
+  width: 20px;
+  height: 20px;
+  background-color: #0074D9AA;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.marker:hover {
+  width: 22px;
+  height: 22px;
+  background-color: #0074D9;
+  transition: all 0.3s ease;
+}
+
+/* ---- Popup ---- */
+.maplibregl-popup-content {
+  border-radius: 8px;
+}
+
+.popup-info {
+  padding: 6px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-city {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.popup-country {
+  font-size: 14px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.popup-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #0074D9;
+  cursor: pointer;
+}
+
+.popup-link:hover {
+  color: #005bb5;
+}
+
+/* ---- Scenario section ---- */
+#scenario-heading {
+  padding-top: 40px;
+  padding-bottom: 12px;
+  scroll-margin-top: 36px;
+}
+
+#scenario-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#scenario-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 16px;
+  gap: 10px;
+}
+
+#scenario-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#scenario-map-info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+#scenario-thumbnail-wrap {
+  position: relative;
+}
+
+#scenario-thumbnail {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+#scenario-thumbnail-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  color: #bbb;
+  font-size: 14pt;
+}
+
+#scenario-text {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#scenario-city {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+#scenario-country {
+  font-size: 14px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ---- Scenario list ---- */
+#scenario-list {
+  flex: 6;
+  list-style: none;
+  padding: 0;
+  margin: 0 30px;
+}
+
+.scenario-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.scenario-item:last-child {
+  border-bottom: none;
+}
+
+.scenario-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.scenario-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 16px;
+  background-color: #eee;
+  color: #313131;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: 0.3 ease-in-out;
+}
+
+.scenario-download:hover {
+  background-color: #5a9fd4;
+  color: #fff;
+}
+
+/* ---- Footer ---- */
+#footer {
+  margin-top: 40px;
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  border-top: 1px solid #eee;
+}
